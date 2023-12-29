@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav_Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <ion-icon name="search" class="searchBtn"></ion-icon>
+                    <ion-icon name="close" class="closeBtn"></ion-icon>
+                </span>
+            </div>
+        </div>
+        <div class="searchBox">
+            <input type="text" placeholder="Search here . . .">
+        </div>
+    </header>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        let searchBtn = document.querySelector('.searchBtn');
+        let closeBtn = document.querySelector('.closeBtn');
+        let searchBox = document.querySelector('.searchBox');
+
+        searchBtn.onclick = function () {
+            searchBox.classList.add('active');
+            closeBox.classList.add('active');
+            searchBtn.classList.add('active');
+
+            closeBtn.onclick = function () {
+                searchBox.classList.remove('active');
+                closeBox.classList.remove('active');
+                searchBtn.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
